@@ -1,0 +1,32 @@
+{
+  "name": "er_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/loader.js",
+    "prod": "node server/loader.js",
+    "deploy": "npm i && npm prod"
+  },
+  "author": "Sahil Siddiqui",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@babel/register": "^7.18.9",
+    "appknit-backend-bundle": "^1.0.805",
+    "body-parser": "^1.20.1",
+    "busboy-body-parser": "^0.3.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "es6-promise": "^4.2.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "nodemon": "^2.0.20"
+  }
+}
