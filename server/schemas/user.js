@@ -14,7 +14,7 @@ const User = new Schema({
   firstName: String,
   lastName: String,
   address: String,
-  role: String,
+  role: Number,
   password: String,
   verified: { type: Boolean, default: false },
   blocked: { type: Boolean, default: false },

@@ -1,9 +1,8 @@
 /**
- * This is the indexer for user model
+ * This is the indexer for model
  * @author Sahil Siddiqui
- * @since Nov 02 , 2022
+ * @since Nov 02, 2022
  */
-
 import fs from "fs";
 
 const skip = ["index.js"];
@@ -16,7 +15,7 @@ files.map((file) => {
       .split(".")[0]
       .substring(1, file.length)}`;
     if (!fileName.startsWith(".")) {
-      module.exports[`Users${fileName}Service`] = require(`./${file}`).default;
+      module.exports[`${fileName}Model`] = require(`./${file}`);
     }
   }
 });

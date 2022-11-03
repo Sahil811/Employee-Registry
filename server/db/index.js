@@ -10,6 +10,7 @@ import { mongoConnectionString } from "../constants";
 const useNewUrlParser = true;
 const useUnifiedTopology = true;
 // const useCreateIndex = true;
+
 mongoose.Promise = es6Promise;
 mongoose.connect(
   mongoConnectionString,

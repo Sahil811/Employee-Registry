@@ -31,3 +31,9 @@ export const ADMIN_USER_ACTIONS = {
   UNBLOCKED: 3,
   DELETED: 4,
 };
+
+export const EMPLOYEE_ROLES = {
+  EXECUTIVE: 1,
+  MANAGER: 2,
+  ACCOUNTANT: 3,
+};

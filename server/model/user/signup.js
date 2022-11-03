@@ -12,17 +12,35 @@ import { SUCCESS_CODE } from "../../constants";
  * @since Nov 02, 2022
  */
 
-export default ({ userName, email, firstName, lastName, password }) =>
+export default ({
+  userName,
+  email,
+  firstName,
+  lastName,
+  password,
+  address,
+  role,
+}) =>
   new Promise(async (resolve, reject) => {
     try {
       const { code, message } = await PropsValidationUtility({
-        validProps: ["userName", "email", "password"],
+        validProps: [
+          "userName",
+          "email",
+          "firstName",
+          "lastName",
+          "password",
+          "address",
+          "role",
+        ],
         sourceDocument: {
           userName,
           email,
           firstName,
           lastName,
           password,
+          address,
+          role,
         },
       });
 
@@ -51,15 +69,9 @@ export default ({ userName, email, firstName, lastName, password }) =>
 
       await userObject.save();
 
-      if (user.code !== SUCCESS_CODE) {
-        return reject(ResponseUtility.GENERIC_ERR({ message: user.message }));
-      }
       return resolve(
         ResponseUtility.SUCCESS({
-          data: {
-            accessToken: token,
-            user: user.data,
-          },
+          message: "You have registered successfully. Please login to continue",
         })
       );
     } catch (err) {
