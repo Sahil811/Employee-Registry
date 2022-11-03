@@ -14,4 +14,5 @@ const prefix = "/api/user/";
 
 export default (app) => {
   app.post(`${prefix}signup`, UserControllers.signup);
+  app.post(`${prefix}login`, UserControllers.login);
 };
