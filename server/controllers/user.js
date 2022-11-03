@@ -11,4 +11,5 @@ import { ModelResolver } from "./resolvers";
 export default {
   signup: (req, res) => ModelResolver(req, res, UserModel.UsersSignupService),
   login: (req, res) => ModelResolver(req, res, UserModel.UsersLoginService),
+  list: (req, res) => ModelResolver(req, res, UserModel.UsersListService),
 };

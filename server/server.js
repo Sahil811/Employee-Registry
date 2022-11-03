@@ -1,7 +1,7 @@
 /**
  * This is the server file for {{app_name}}
- * @author {{app_author}}
- * @since {{app_date}}
+ * @author Sahil Siddiqui
+ * @since Nov 02, 2022
  */
 import express from "express";
 import busboyBodyParser from "busboy-body-parser";

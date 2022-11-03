@@ -10,7 +10,6 @@ export const {
   ATLAS_PASSWORD,
   ATLAS_CLUSTER,
   SECRET_STRING,
-  PAGINATION_LIMIT = 30,
   APP_NAME = "APP_NAME",
   NODE_ENV = `${APP_NAME}-development`,
 } = process.env;
@@ -24,6 +23,7 @@ export const mongoConnectionString = `mongodb+srv://${ATLAS_USER}:${ATLAS_PASSWO
 export const secretString = SECRET_STRING;
 
 export const SUCCESS_CODE = 100;
+export const PAGINATION_LIMIT = 30;
 
 export const ADMIN_USER_ACTIONS = {
   VERIFIED: 1,

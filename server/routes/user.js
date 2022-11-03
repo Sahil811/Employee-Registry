@@ -1,7 +1,4 @@
-import {
-  // AuthenticationControllers,
-  UserControllers,
-} from "../controllers";
+import { AuthenticationControllers, UserControllers } from "../controllers";
 
 /**
  * @description
@@ -15,4 +12,9 @@ const prefix = "/api/user/";
 export default (app) => {
   app.post(`${prefix}signup`, UserControllers.signup);
   app.post(`${prefix}login`, UserControllers.login);
+  app.post(
+    `${prefix}list`,
+    AuthenticationControllers.authenticateUser,
+    UserControllers.list
+  );
 };
