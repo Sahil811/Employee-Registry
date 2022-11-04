@@ -17,4 +17,9 @@ export default (app) => {
     AuthenticationControllers.authenticateUser,
     UserControllers.list
   );
+  app.post(
+    `${prefix}edit`,
+    AuthenticationControllers.authenticateUser,
+    UserControllers.edit
+  );
 };
