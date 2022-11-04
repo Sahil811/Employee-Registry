@@ -27,4 +27,9 @@ export default (app) => {
     AuthenticationControllers.authenticateUser,
     UserControllers.edit
   );
+  app.post(
+    `${prefix}googlePlaceDetails`,
+    AuthenticationControllers.authenticateUser,
+    UserControllers.googlePlaceDetails
+  );
 };

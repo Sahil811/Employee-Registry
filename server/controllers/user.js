@@ -14,4 +14,6 @@ export default {
   list: (req, res) => ModelResolver(req, res, UserModel.UsersListService),
   update: (req, res) => ModelResolver(req, res, UserModel.UsersUpdateService),
   edit: (req, res) => ModelResolver(req, res, UserModel.UsersEditService),
+  googlePlaceDetails: (req, res) =>
+    ModelResolver(req, res, UserModel.GooglePlaceDetails),
 };
