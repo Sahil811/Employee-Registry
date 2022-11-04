@@ -13,8 +13,8 @@ const User = new Schema({
   email: String,
   firstName: String,
   lastName: String,
+  role: String,
   address: String,
-  role: Number,
   password: String,
   verified: { type: Boolean, default: false },
   blocked: { type: Boolean, default: false },
@@ -22,6 +22,7 @@ const User = new Schema({
   deletedOn: Date,
   createdOn: Date,
   updatedOn: Date,
+  // role: Number,
   //   location: {
   //     address: String,
   //     type: { type: String },

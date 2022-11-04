@@ -1,4 +1,5 @@
 import { AuthenticationControllers, UserControllers } from "../controllers";
+import { MultipartService } from "../services";
 
 /**
  * @description
@@ -26,6 +27,12 @@ export default (app) => {
     `${prefix}edit`,
     AuthenticationControllers.authenticateUser,
     UserControllers.edit
+  );
+  app.post(
+    `${prefix}import`,
+    MultipartService,
+    AuthenticationControllers.authenticateUser,
+    UserControllers.import
   );
   app.post(
     `${prefix}googlePlaceDetails`,
