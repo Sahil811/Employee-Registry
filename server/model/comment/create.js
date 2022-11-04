@@ -39,10 +39,10 @@ export default ({ id, userRef, text = "" }) =>
       const user = await UserModel.findOne(
         { _id: id },
         {
-          profilePicture: 1,
           email: 1,
           firstName: 1,
           lastName: 1,
+          userName: 1,
         }
       );
 
