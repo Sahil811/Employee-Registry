@@ -12,5 +12,6 @@ export default {
   signup: (req, res) => ModelResolver(req, res, UserModel.UsersSignupService),
   login: (req, res) => ModelResolver(req, res, UserModel.UsersLoginService),
   list: (req, res) => ModelResolver(req, res, UserModel.UsersListService),
+  update: (req, res) => ModelResolver(req, res, UserModel.UsersUpdateService),
   edit: (req, res) => ModelResolver(req, res, UserModel.UsersEditService),
 };

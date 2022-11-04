@@ -18,6 +18,11 @@ export default (app) => {
     UserControllers.list
   );
   app.post(
+    `${prefix}update`,
+    AuthenticationControllers.authenticateUser,
+    UserControllers.update
+  );
+  app.post(
     `${prefix}edit`,
     AuthenticationControllers.authenticateUser,
     UserControllers.edit

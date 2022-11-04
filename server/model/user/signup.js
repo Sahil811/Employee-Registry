@@ -65,6 +65,8 @@ export default ({
         firstName,
         lastName,
         password,
+        address,
+        role,
       });
 
       await userObject.save();
