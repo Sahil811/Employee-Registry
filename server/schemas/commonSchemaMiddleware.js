@@ -23,4 +23,5 @@ export const applyMiddleware = (Model, customFunction = false) => {
   Model.pre("update", applyFuntion);
   Model.pre("updateOne", applyFuntion);
   Model.pre("updateMany", applyFuntion);
+  Model.pre("insertMany", applyFuntion);
 };
