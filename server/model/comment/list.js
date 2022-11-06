@@ -46,7 +46,7 @@ export default ({ userRef, page = 1, limit = PAGINATION_LIMIT }) =>
                   email: "$email",
                   firstName: "$firstName",
                   lastName: "$lastName",
-                  userName: "userName",
+                  userName: "$userName",
                 },
               },
             ],
