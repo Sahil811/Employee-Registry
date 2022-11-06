@@ -11,7 +11,7 @@ import { UsersDetailsService } from ".";
  * @since Nov 04, 2022
  */
 
-export default ({ id, userName, firstName, lastName, address, role }) =>
+export default ({ userRef, userName, firstName, lastName, address, role }) =>
   new Promise(async (resolve, reject) => {
     try {
       const updateQuery = await SchemaMapperUtility({
@@ -21,8 +21,8 @@ export default ({ id, userName, firstName, lastName, address, role }) =>
         address,
         role,
       });
-      await UserModel.updateOne({ _id: id }, updateQuery);
-      const user = await UsersDetailsService({ id });
+      await UserModel.updateOne({ _id: userRef }, updateQuery);
+      const user = await UsersDetailsService({ id: userRef });
       if (user.code !== SUCCESS_CODE) {
         return reject(ResponseUtility.GENERIC_ERR({ message: user.message }));
       }
