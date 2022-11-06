@@ -29,6 +29,11 @@ export default (app) => {
     UserControllers.edit
   );
   app.post(
+    `${prefix}details`,
+    AuthenticationControllers.authenticateUser,
+    UserControllers.details
+  );
+  app.post(
     `${prefix}import`,
     MultipartService,
     AuthenticationControllers.authenticateUser,

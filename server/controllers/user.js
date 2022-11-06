@@ -15,6 +15,7 @@ export default {
   update: (req, res) => ModelResolver(req, res, UserModel.UsersUpdateService),
   edit: (req, res) => ModelResolver(req, res, UserModel.UsersEditService),
   import: (req, res) => ModelResolver(req, res, UserModel.UsersImportService),
+  details: (req, res) => ModelResolver(req, res, UserModel.UsersDetailsService),
   googlePlaceDetails: (req, res) =>
     ModelResolver(req, res, UserModel.GooglePlaceDetails),
 };
