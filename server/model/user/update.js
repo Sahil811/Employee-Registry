@@ -11,10 +11,19 @@ import { UsersDetailsService } from ".";
  * @since Nov 04, 2022
  */
 
-export default ({ userRef, userName, firstName, lastName, address, role }) =>
+export default ({
+  userRef,
+  email,
+  userName,
+  firstName,
+  lastName,
+  address,
+  role,
+}) =>
   new Promise(async (resolve, reject) => {
     try {
       const updateQuery = await SchemaMapperUtility({
+        email,
         userName,
         firstName,
         lastName,
