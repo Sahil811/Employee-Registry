@@ -29,6 +29,7 @@ export default ({ employeeCsv }) =>
           user.lastName = jsonStr.Nachname;
           user.role = jsonStr.Rolle;
           user.address = `${jsonStr.Strasse}, ${jsonStr.Nr}, ${jsonStr.PLZ}, ${jsonStr.Ort}, ${jsonStr.Land}`;
+          user.createdOn = new Date();
 
           if (Object.keys(user).length) {
             UserModel.insertMany(user);
