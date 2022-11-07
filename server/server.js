@@ -39,6 +39,11 @@ app.get("/", (req, res) =>
   res.send(`<h1>{{app_name}} ${env} environment</h1>`)
 );
 
-const port = process.env.NODE_ENV === "development" ? 3000 : 3001;
+// const port = process.env.NODE_ENV === "development" ? 3000 : 3001;
 
-app.listen(port, () => console.log(`Backend is running on port ${port}`));
+var server_port = process.env.PORT || process.env.PORT || 80;
+var server_host = process.env.HOST || "0.0.0.0";
+
+app.listen(server_port, server_host, () =>
+  console.log(`Backend is running on port ${port}`)
+);
