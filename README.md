@@ -1,0 +1,13 @@
+In the project directory, you can run:
+
+npm run dev
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
+API endpoint: http://localhost:3000/api/
+
+npm start
+Runs the app in the production mode.
+Open http://localhost:3000 to view it in the browser.
+API endpoint: http://localhost:3000/api/
+
+=
