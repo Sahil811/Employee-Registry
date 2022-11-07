@@ -9,6 +9,9 @@
     "prod": "node server/loader.js",
     "deploy": "npm i && npm prod"
   },
+  "engines": {
+    "node": "16.18.0"
+  },
   "author": "Sahil Siddiqui",
   "license": "ISC",
   "dependencies": {
