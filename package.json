@@ -8,7 +8,7 @@
     "dev": "nodemon server/loader.js",
     "start": "node server/loader.js",
     "deploy": "npm i && npm prod",
-    "build": "./node_modules/.bin/babel -d ./babel_build ./server -s"
+    "babel-build": "./node_modules/.bin/babel -d ./babel_build ./server -s"
   },
   "engines": {
     "node": "16.18.0"
@@ -31,6 +31,8 @@
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.19.6",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.20.2",
     "@babel/preset-env": "^7.19.4",
     "nodemon": "^2.0.20"
   }
