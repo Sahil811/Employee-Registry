@@ -18,4 +18,9 @@ export default (app) => {
     AuthenticationControllers.authenticateUser,
     CommentControllers.list
   );
+  app.post(
+    `${prefix}update`,
+    AuthenticationControllers.authenticateUser,
+    CommentControllers.update
+  );
 };
