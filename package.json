@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server/loader.js",
     "start": "node server/loader.js",
-    "deploy": "npm i && npm prod"
+    "deploy": "npm i && npm prod",
+    "build": "./node_modules/.bin/babel -d ./babel_build ./server -s"
   },
   "engines": {
     "node": "16.18.0"
