@@ -12,4 +12,5 @@ export default {
   create: (req, res) => ModelResolver(req, res, CommentModel.Create),
   list: (req, res) => ModelResolver(req, res, CommentModel.List),
   update: (req, res) => ModelResolver(req, res, CommentModel.Update),
+  delete: (req, res) => ModelResolver(req, res, CommentModel.Delete),
 };

@@ -23,4 +23,9 @@ export default (app) => {
     AuthenticationControllers.authenticateUser,
     CommentControllers.update
   );
+  app.post(
+    `${prefix}delete`,
+    AuthenticationControllers.authenticateUser,
+    CommentControllers.delete
+  );
 };
