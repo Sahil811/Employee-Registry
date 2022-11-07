@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/loader.js",
-    "prod": "node server/loader.js",
+    "dev": "nodemon server/loader.js",
+    "start": "node server/loader.js",
     "deploy": "npm i && npm prod"
   },
   "engines": {
